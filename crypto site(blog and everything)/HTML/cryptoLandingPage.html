@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/pages.css">
+  <title>TaraCrypto: Crypto Learning made fun!</title>
+</head>
+<body>
+  
+  <div class="maincontainer">
+
+    <!--navigation bar for the site-->
+    <div class="navbar">
+      <div class="logo">
+        <h3>TaraCrypto</h3>
+      </div>
+
+      <div class="tabButtonShifters">
+        <a class="toggleBtns" href="#" onclick="toggle('homePages',this)" id="defaultDisplay">Home</a>
+        <a class="toggleBtns" href="../PHP/cryptoBlogFiles/cryptoHeadlines.php">Blogs</a>
+        <a class="toggleBtns" href="#" onclick="toggle('calculatorPage',this)">Calculator</a>
+        <a class="toggleBtns" href="#" onclick="toggle('portfolioPage',this)">Portfolio</a>
+        <!--<a class="toggleBtns" onclick="">Crypto Commerce</a>-- TODO: add feature soon-->
+      </div> 
+
+    </div>
+
+    <div id="navigation-logo-area">
+    <!--mobile logo display for the site-->
+      <div id="moblogo">
+        <a  id="navigationToggle" onclick="navigationToggler()" >&#9776</a>
+        <h3>TaraCrypto</h3>
+      </div>
+
+      <!--mobile nav bar for the site-->
+      <div id="mobilenavbar">
+        <a class="toggleBtns" onclick="toggle('homePages',this)" id="defaultDisplay">Home</a>
+        <a class="toggleBtns" href="../PHP/cryptoBlogFiles/cryptoHeadlines.php">Blogs</a>
+        <a class="toggleBtns" onclick="toggle('calculatorPage',this)">Calculator</a>
+        <a class="toggleBtns" onclick="toggle('portfolioPage',this)">Portfolio</a>
+        <!--<a class="toggleBtns" onclick="">Crypto Commerce</a>-- TODO: add feature soon-->
+      </div>
+  </div>
+
+    <!--content bar for the site (the homepage site)-->
+    <div class="content" id="homePages">
+        <div class="column1">
+          
+          <h1>"Unlock the Secrets of Crypto: Your Journey to Financial Freedom Starts Here!"</h1>
+          <img src="../images/LocalImages/bitcoin.gif">
+            <p>
+              Welcome to a world of endless possibilities and financial freedom through 
+              cryptocurrencies. 
+              Ready for a thrilling adventure?
+              .Let's set sail together!!<br>
+            </p>
+          <h1>What this site will do for you</h1>
+            <p>
+             I built this site with the intention of posting crypto blogs in order to assist you on this journey
+             by giving some information on some of the available cryptocurrencies in the market.
+             Keep in mind that this is not financial advice, i am giving knowledge to assist you in your 
+             endevours.
+             Ideally you should also do your research before investing into a coin
+            </p>
+          
+         
+          <h1>Ready to dive into the world of crypto?</h1>
+          <img src="../images/LocalImages/meteorbtc.gif">
+            <p>
+              🚀 Sign up for a Binance account now and claim your <b>FREE 100 USDT rebate voucher!</b>
+               Don't miss this limited-time offer! 💰 Join thousands of others and start your crypto
+               journey today. Click here to get started: <br><br><br>
+               <a id="signUpBtn" href="https://accounts.binance.info/register?ref=716747944">Sign Up Now!</a>
+            </p>
+
+
+        </div>
+
+        <div class="column2">
+
+          <h1>Conclusion</h1>
+          <img src="../images/LocalImages/btcImage1.jpg">
+            <p>Cryptocurrencies have undoubtedly disrupted traditional 
+              finance and opened up new possibilities for the 
+              future of money and financial transactions. 
+              While their growth has been impressive, 
+              it is essential to approach them with caution, 
+              understanding the risks and doing thorough research 
+              often denoted as <b>D </b>Do <b>Y</b> your <b>O</b> own <b>R</b> research
+            </p>
+
+        </div>
+    </div>
+
+
+    <!--this is the calculatorpage pane which handles the profit percentage calculation for the site-->
+    <div class="content" id="calculatorPage">
+        <div class="calculator-holder-container">
+          <!--calculator housing-->
+            <h1>PnL calculator</h1>
+              <p id="PnLIndicator">0%</p>
+              <input type="text" id="price-bought-at-container" placeholder="price you bought"><br><br>
+              <input type="text" id="price-sold-at-container" placeholder="price you sold"><br><br>
+              <button onclick="calculate()">Calculate</button><br><br>
+        </div>
+    </div>
+
+
+    <!--this is the portfolio page(in its beta phase)-->
+    <div class="content" id="portfolioPage">
+      <h1>Portfolio Tracker &lpar; BETA &rpar;</h1>
+    <!--container that is displaying the portfolio(beta)-->
+    <div class="portfolio-breakdown-container">
+          <!--styling each box for a realistic dash display-->
+          <div class="boxes" id="btc-box">
+
+            <h3>BTC:</h3>
+            <img src="../images/LocalImages/btc_logo.png">
+            <p class="percentify-display">0%</p>
+          </div>
+
+          <div class="boxes" id="eth-box">
+            
+            <h3>ETH:</h3>
+            <img src="../images/LocalImages/ether_logo.png">
+            <p class="percentify-display">0%</p>
+          </div>
+
+          <div class="boxes" id="bnb-box">
+            <h3>BNB:</h3>
+            <img src="../images/LocalImages/BNB png.png">
+            <p class="percentify-display">0%</p>
+          </div>  
+
+          <div class="boxes" id="usdt-box">
+            <h3>USDT:</h3>
+            <img src="../images/LocalImages/tether_logo.png">
+            <p class="percentify-display">0%</p>
+          </div>
+
+      </div>
+
+    </div>
+
+    <!--footer bar for the site-->
+    <div class="footer">
+      <div class="section-logos">
+        <h3>TaraCrypto</h3>
+
+        <!--newsletter div-->
+        <div class="newsletter">
+          <p>Subscribe to the newsletter</p>
+          <form action="../PHP/newsLetterSystemFiles/newsLetterSubscription.php" method="POST">
+            <input type="email" placeholder="your best email" name="subscriberEmail" required><br><br>
+            <input type="text"  placeholder="username" name="subscriberUsername" required><br><br>
+            <input type="submit" value="Subscribe" id="submit-newsletter-button" name="submit"><br><br>
+          </form>
+        </div>
+      </div>
+      
+        <div class="section-links-1">
+          <h3>Beginner Blogs</h3>
+          <ul>
+            <li><a>Introduction to Crypto!</a></li>
+            <li><a>What is bitcoin</a></li>
+            <li><a>The power of Ether</a></li>
+            <li><a>All about exchanges</a></li>
+          </ul>
+        </div>
+
+        <div class="section-links-2">
+          <h3>Other Links</h3>
+          <ul>
+            <li><a>PnL calc</a></li>
+            <li><a>LinkTest</a></li>
+            <li><a>LinkTest</a></li>
+            <li><a>LinkTest</a></li>
+          </ul>
+        </div>
+
+        <div class="section-links-3">
+          <h3>Exchanges/Affliate</h3>
+          <ul>
+            <li><a>Binance exchange</a></li>
+            <li><a>Bybit</a></li>
+            <li><a>Kraken</a></li>
+          </ul>
+        </div>
+    </div>
+
+  </div>
+
+    <!--element handles our tab shifting progress-->
+    <script src="../JS/tabShifter.js"></script>
+    <script src="../JS/calculatorFunction.js"></script>
+    <script src="../JS/mobileSideNavToggler.js"></script>
+
+</body>
+
+
+
+</html>    

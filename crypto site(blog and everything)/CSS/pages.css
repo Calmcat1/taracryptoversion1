@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+/*keyframes*/
+
+/*rainbow style text heh for the fun*/
+@keyframes textColorChange{
+    0%{
+      color: white;
+    }
+
+    50%{
+      color: grey
+    }
+
+    100%{
+      color: yellow
+    }
+
+}
+
+/* special keyframe to change hover to white then yellow*/
+@keyframes hoverSpecial{
+    0%{
+      background-color: white;
+      color: black;
+
+    }
+
+    100%{
+      background-color:yellow;
+      color: black;
+    }
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+
+body{
+  margin: 0 0 0 0;
+
+}
+a{
+  padding: 6px 17px 6px 17px;
+  font-family: roboto;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+
+p{
+  font-weight: 100;
+  font-size: 1.6em;
+
+}
+
+img{
+  width: 40%;
+  border-radius: 3%;
+}
+
+/* input styling for all inputs */
+input{
+  padding: 6px 17px 6px 17px;
+  font-size: 1.5em;
+
+}
+
+/*button styling for all buttons*/
+button{
+  padding: 6px 17px 6px 17px;
+  font-size: 1.5em;
+  background-color: transparent;
+  border: 1px solid;
+  border-radius: 3px;
+  transition: 0.3s color, 0.3s background-color;
+}
+
+button:hover{
+  color: white;
+  background-color: black;
+}
+
+
+/*maincont styling*/
+.maincontainer{
+  font-family: roboto;
+
+}
+/* navbar */
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 5%;
+  background-color: black;
+  border-radius: 1%;
+  
+}
+
+#mobilenavbar{
+  display: none
+}
+
+#moblogo{
+  display: none;
+}
+
+/*navbar elements*/
+
+.navbar a, .navbar h3{
+  color: white;
+  transition: 0.5s text-decoration;
+}
+
+#homepage{
+  text-decoration: overline;
+}
+
+/*behaviours*/
+.navbar a:hover{
+  text-decoration: overline;
+}
+
+/* content  and content  columns*/
+.content{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+  gap: 1%;
+  padding: 4%;
+}
+
+
+.column1, .column2{
+  padding: 5%
+  
+}
+
+/*footer*/
+.footer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: black;
+  text-align: center;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+}
+
+/*footer elements*/
+.footer li{
+  font-weight: 100;
+  color: white;
+
+}
+
+.footer h1, .footer h3{
+  color: white;
+  margin-bottom:  1%;
+}
+
+.footer div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer .section-logos{
+  padding-left: 5%;
+}
+
+/*calculator holder container styling and elements that are in the calcholder*/
+
+.calculator-holder-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+ 
+  padding: 5%;
+ 
+}
+
+.calculator-holder-container input{
+  margin-top: 4%;
+}
+
+.calculator-holder-container p{
+  font-size: 2.5em;
+}
+
+
+/* miscallenious button styling */
+#signUpBtn{
+  background-color: yellow;
+  color: black;
+  padding: 6px 17px 6px 17px;
+  border-radius: 30px;
+  transition: 0.5s background-color;
+}
+
+#signUpBtn:hover, #signUpBtn:active{
+  background-color: black;
+  color: white;
+}
+
+
+/*newsletter element modifications */
+
+.newsletter{
+  align-items: center !important;
+}
+
+.newsletter p, .newsletter input::placeholder{
+  color: white;
+}
+
+/*p rainbow text*/
+.newsletter p{
+  animation: 3s textColorChange infinite;
+}
+
+.newsletter input{
+  font-size: 1.2em;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  transition: 0.3s animation;
+}
+
+.newsletter #submit-newsletter-button:hover{
+  background-color: yellow;
+  color: black;
+  animation: 0.4s hoverSpecial;
+  border: 1px solid yellow;
+
+}
+
+
+/*portfolio calculator containers*/
+
+.portfolio-breakdown-container{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.portfolio-breakdown-container div{
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  border-radius: 5%;
+  gap: 2.5%;
+  margin: 2.5%;
+  padding: 10%;
+  padding-right: 40%;
+
+}
+
+
+/*mobile specifics*/
+
+@media only screen and (max-width: 425px) {
+
+  /*mobile input styling*/
+  input{
+    padding: 6px 17px 6px 17px;
+    font-size: 1.1em;
+  
+  }
+
+  p{
+    font-size: 1.4em;
+  }
+
+  .content{
+    padding-top: 20%;
+    flex-direction: column;
+  }
+
+  /*no pc navbar on mobile screens*/
+  .navbar{
+    display: none;
+  }
+
+  /*mobile navigation bar, logo and elements*/
+
+  #moblogo{
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    width: 100vw;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding-top: 5%;
+    padding-bottom: 5%;
+     margin-bottom: 5%;
+  }
+
+  #moblogo h3{
+    margin-top: 0;
+    margin-bottom: 0;
+   
+  }
+
+  #mobilenavbar{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 99;
+    background-color: black;
+    padding: 0;
+    color: white;
+    height: 100vh;
+    width: 0;
+    transition: 0.5s width, 0.5s padding;
+    
+
+    
+  }
+
+  #mobilenavbar a{
+    margin-top: 20%;
+    margin-bottom: 20%;
+    display: none;
+    pointer-events: none;
+  
+  }
+
+ 
+
+  /*liability clause size*/
+
+  #liab-clause{
+    font-size: 1em;
+  }
+
+  /*here is the footer mobile elems*/
+  .footer{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer div{
+    align-items: flex-start;
+  }
+
+  /*mobile button signUp btn design*/
+
+  #signUpBtn{
+    font-size: 1.2em;
+  }
+
+  /*mobile calcInput styles*/
+  .calculator-holder-container input{
+    margin-top: 5%;
+  }
+
+
+}

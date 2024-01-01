@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  margin: 0 0 0 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+/*special styling for the one inside a*/
+h1 a{
+  color: white;
+}
+
+h1 a:hover{
+  opacity: 0.7;
+}
+
+
+p{
+  font-weight: 100;
+  font-size: 2em
+}
+
+img{
+  width: 30%;
+  border-radius: 3%;
+}
+
+.maincontainer{
+  font-family: roboto;
+  
+}
+
+/* nav bar styling for the site*/
+.nav{
+  text-align: center;
+}
+
+.nav h1{
+  margin-top: 0;
+  margin-bottom: 2.5%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  background-color: black;
+  color: white;
+}
+
+
+.content{
+  display: flex;
+  flex-direction: column;
+  padding: 2.5%;
+}
+
+.headline_container{
+  display: flex;
+  gap: 1%;
+  align-items: flex-start;
+  padding-bottom: 5%;
+}
+
+/*div to put the lower pointer* takes one to the bottom of the page*/
+.hver_div{
+  position: fixed;
+  z-index: 4;
+  left: 90%;
+  top: 90%;
+  padding: 2%;
+  background-color: black;
+}
+
+.hver_div a{
+  color: white;
+}
+
+
+/*mobile specifics*/
+
+@media only screen and (max-width: 425px){
+
+  p{
+    font-size: 1.4em;
+  }
+  .headline_container{
+    align-items: center;
+  }
+
+}
+
